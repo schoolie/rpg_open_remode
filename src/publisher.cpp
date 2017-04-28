@@ -65,7 +65,7 @@ void rmd::Publisher::publishPointCloud() const
     const float fy = depthmap_->getFy();
     const float cx = depthmap_->getCx();
     const float cy = depthmap_->getCy();
-
+    pc_->clear();
     for(int y=0; y<depth.rows; ++y)
     {
       for(int x=0; x<depth.cols; ++x)
