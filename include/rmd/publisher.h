@@ -35,6 +35,9 @@ class Publisher
   typedef pcl::PointXYZI PointType;
   typedef pcl::PointCloud<PointType> PointCloud;
 
+  typedef pcl::PointXYZRGB PointTypeRGB;
+  typedef pcl::PointCloud<PointTypeRGB> PointCloudRGB;  
+
 public:
 
   Publisher(ros::NodeHandle &nh,
@@ -43,6 +46,8 @@ public:
   void publishDepthmap() const;
 
   void publishPointCloud() const;
+
+  void publishPointCloudRGB() const;
 
   void publishDepthmapAndPointCloud() const;
 
@@ -57,7 +62,9 @@ private:
   image_transport::Publisher conv_publisher_;
 
   PointCloud::Ptr pc_;
+  PointCloudRGB::Ptr pc_rgb_;
   ros::Publisher pub_pc_;
+  ros::Publisher pub_pc_rgb_;
 
   cv::Mat colored_;
 };

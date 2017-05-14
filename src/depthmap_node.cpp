@@ -95,6 +95,7 @@ void rmd::DepthmapNode::denseInputCallback(
     return;
   }
   cv::Mat img_8uC1;
+  cv::Mat rgb_img_8uC3;
   try
   {
     cv_bridge::CvImageConstPtr cv_img_ptr =
@@ -102,6 +103,15 @@ void rmd::DepthmapNode::denseInputCallback(
                              dense_input,
                              sensor_msgs::image_encodings::MONO8);
     img_8uC1 = cv_img_ptr->image;
+
+    cv_bridge::CvImageConstPtr cv_img_ptr_rgb =
+        cv_bridge::toCvShare(dense_input->image,
+                             dense_input,
+                             sensor_msgs::image_encodings::BGR8);
+
+    rgb_img_8uC3 = cv_img_ptr_rgb->image;
+
+
   }
   catch (cv_bridge::Exception& e)
   {
@@ -131,6 +141,7 @@ void rmd::DepthmapNode::denseInputCallback(
          dense_input->min_depth,
          dense_input->max_depth))
     {
+      depthmap_->inputImageRGB(rgb_img_8uC3);
       state_ = State::UPDATE;
     }
     else
