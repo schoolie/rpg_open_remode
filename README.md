@@ -22,7 +22,7 @@ PS: Supported only while using this version of ORB_SLAM2 (https://github.com/ayu
 
 The REMODE implementation in this repository is research code, any fitness for a particular purpose is disclaimed.
 
-The code has been tested in Ubuntu 12.04, 14.04, 15.04, ROS Groovy, ROS Indigo and ROS Jade. and Kine
+The code has been tested in Ubuntu 12.04, 14.04, 15.04, 16.04, ROS Groovy, ROS Indigo, ROS Jade and ROS Kinetic.
 
 #### Licence
 
