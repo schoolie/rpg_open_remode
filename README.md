@@ -9,11 +9,20 @@ The following video demonstrates the proposed approach:
 
 http://youtu.be/QTKd5UWCG0Q
 
+#### Changelog
+
+1. RGB pointcloud support added 
+2. Publish only current pointcloud
+
+![coloured_reconstruction](https://cloud.githubusercontent.com/assets/4923897/26147541/7f7feec8-3b11-11e7-8b4c-5458aa922709.png)
+
+PS: Supported only while using this version of ORB_SLAM2 (https://github.com/ayushgaud/ORB_SLAM2)
+
 #### Disclaimer
 
 The REMODE implementation in this repository is research code, any fitness for a particular purpose is disclaimed.
 
-The code has been tested in Ubuntu 12.04, 14.04, 15.04, ROS Groovy, ROS Indigo and ROS Jade.
+The code has been tested in Ubuntu 12.04, 14.04, 15.04, ROS Groovy, ROS Indigo and ROS Jade. and Kine
 
 #### Licence
 
