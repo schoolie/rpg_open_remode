@@ -74,7 +74,7 @@ Visualization Manager:
       Class: rviz/PointCloud2
       Color: 255; 255; 255
       Color Transformer: Intensity
-      Decay Time: 0
+      Decay Time: 300
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
@@ -94,7 +94,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /svo/image
+      Image Topic: /camera/image_raw
       Max Value: 1
       Median window: 5
       Min Value: 0
