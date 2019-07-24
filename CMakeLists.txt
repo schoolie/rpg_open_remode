@@ -42,7 +42,7 @@ if(BUILD_ROS_NODE)
   ADD_DEFINITIONS(-DBUILD_ROS_NODE)
 endif(BUILD_ROS_NODE)
 
-option(BUILD_TESTS "Build test programs" OFF)
+option(BUILD_TESTS "Build test programs" ON)
 if(BUILD_TESTS)
   ADD_DEFINITIONS(-DRMD_BUILD_TESTS)
 endif(BUILD_TESTS)
